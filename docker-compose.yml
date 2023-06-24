@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  libreoffice:
+    # image: dockdock/libreoffice73pyenvpoetry:lo-7.5.3-1-RELEASE
+    image: imiobe/libreoffice:7.5
+    restart: unless-stopped
+    user: root
+    ports:
+      - "2002:2002"
+    volumes:
+      - shared_temp:/tmp
+volumes:
+  shared_temp:
+  
+  # network_mode: bridge
+  # container_name: docker
+  # domainname: codespaces.io
+  # hostname: docker
